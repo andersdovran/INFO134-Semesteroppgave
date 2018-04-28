@@ -78,12 +78,12 @@ function clickprog(id){
 				//lager et JSON-objekt
   				var objekt = JSON.parse(tekst);
 
-  				var innhold = "<table id='tblToaletter'><tr><th id='tblHeaderToalett'></th><th>Toalett</th><tr>";
+  				var innhold = "<table class='tblStyle'><tr><th class='tblHeader'>ID</th><th class='tblHeader'>Sted</th><th class='tblHeader'>Adresse</th><tr>";
 
 				//itererer objektet
   				for (var i=0; i < objekt.entries.length; i++)
   				{
-  					innhold += "<td>"+objekt.entries[i].id+"<td><td>" + objekt.entries[i].plassering + "</td></tr>";
+  					innhold += "<td>"+objekt.entries[i].id+"</td><td>" + objekt.entries[i].plassering + "</td><td>" + objekt.entries[i].adresse +" </td></tr>";
   				}
 
   				innhold += "</table>";

@@ -22,6 +22,9 @@ box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
 }
+.flex-container4{
+
+}
 
 .header {
     text-align: center;
@@ -61,15 +64,9 @@ box-sizing: border-box;
 }
 
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media (min-width: 720px) {
-    .column {
-        flex: 25%;
-        max-width: 50%;
-    }
-  .flex-container3 {
-      flex: 50%;
-  }
+
+
+
 
 }
 /*
@@ -157,14 +154,37 @@ box-sizing: border-box;
 
 
 /* CSS til table */
-
-.tblToaletter{
+.tblStyle{
+    display: flex;
+ flex-wrap: wrap;
+ margin: 1 1 3em 2;
+ padding: 3;
+}
+.tblHeader{
     padding-top: 12px;
-   padding-bottom: 12px;
-   text-align: left;
-   background-color: #4CAF50;
-   color: white;
-   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-       border-collapse: collapse;
-       width: 100%;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: gray;
+    color: white;
+}
+.table-container{
+margin : 0 auto;
+font-size : 4vw;
+flex-wrap: nowrap;
+flex-direction: column;
+
+}
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (min-width: 720px) {
+    .column {
+        flex: 25%;
+        max-width: 50%;
+    }
+  .flex-container3 {
+      flex: 50%;
+  }
+  .table-container{
+  font-size : 100%;
+
+  }
 }
