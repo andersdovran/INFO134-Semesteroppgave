@@ -153,3 +153,18 @@ box-sizing: border-box;
   #h3 {
     text-align: center;
   }
+
+
+
+/* CSS til table */
+
+.tblToaletter{
+    padding-top: 12px;
+   padding-bottom: 12px;
+   text-align: left;
+   background-color: #4CAF50;
+   color: white;
+   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+       border-collapse: collapse;
+       width: 100%;
+}
