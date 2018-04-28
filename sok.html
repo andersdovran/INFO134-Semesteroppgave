@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<!--  gruppe innlevering javascript -->
+
+<!-- ka som må gjøres-->
+
+
+<!-- Systemet skal støtte søk. Den nummerte listen og kartet skal oppdateres etter endt søk, -->
+
+<!--
+og blir dermed brukt til å vise søkeresultatene. Det som utføres i oppgave a og b skal med andre ord brukes til å fremvise søkeresultatene.
+Det skal også være mulig med avansert søk. Kriterier brukeren må kunne spesifisere inkluderer:
+1. Gitt kjønn
+2. Rullestoltilgang
+3.Åpen nå
+4. Åpen <klokkeslett>. Dersom klokkeslettet ikke enda har vært i dag, gjelder søket for denne dagen; ellers gjelder det for i morgen)
+5. Stellerom
+6. Maks pris
+7. Gratis
+
+
+ I tillegg skal det være mulig å skrive fritekst som skal sammenlignes med toalettets navn og adresse.
+ Et tilgjengelig sted i systemet deres (f.eks. ved å følge en lenke til "Avansert søk") skal det være mulig å angi disse kriteriene ved å fylle ut et skjema (hvert kriterie har sitt/sine felt).
+ Når brukeren velger å utføre søket, skal de ulike søkekriteriene først representeres som et objekt. Dersom brukeren søker etter et gratis toalett som er åpent nå,
+ kan søkekriteriene for eksempel representeres av objektet:  searchCriteria = {  free: true,   openNow: true }
+ Det skal også være mulig å angi disse kriteriene i et hurtig-søk, hvor man spesifiserer kriteriene for søket gjennom tekst i stedet for skjema.
+ Dersom brukeren benytter hutigsøk og søker etter "christies kjønn:mann" skal søket oversettes til et objekt som representerer søkekriteriene (som over),
+ for eksempel:  searchCriteria = {  query: "christies",   gender: "male" }
+ I hurtigsøk er det naturlig å bruke regulære uttrykk til løsningen. Begge formene for søk må kunne spesifisere alle de ulike søkekriteriene,
+ og ved første håndtering er det lurt å la begge formene gi opphav til et objekt som representerer søkekriteriene på en uniform måte.
+-->
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Søkemotor</title>
+    <link rel="stylesheet" type="text/css" href="css/stylev4.css">
+  <script type="text/javascript" src="js/JavascriptSuper.js"></script>
+</head>
+
+<body>
+  <div class="flex-meny">
+      <div class="dropdown">
+          <button class="button buttonForDrop">Meny</button>
+            <div class="dropdown-content">
+              <a href="attraksjoner.html">Places to visit</a>
+              <a href="kartAttraksjoner.html">Kart</a>
+				<a href="toaletter.html">Liste over toaletter</a>
+				<a href="kartToaletter.html"> Kart over toaletter</a>
+				<a href="sok.html">Søkemotor</a>
+            </div>
+      </div>
+	</div>
+
+<p style="visibility: hidden;"> ----------------------------------- </p>
+
+<button class="buttonButton1" onclick='avansertSøk()'>Avansert søk</button>
+
+
+
+
+
+<button class="buttonButton4" onclick='enkeltSøk()'>enkeltSøk</button>
+
+
+<form id="indexform" class="" action="indexUtenWildboy.html" method="get">
+
+<input id="checkboxmann" type="checkbox" name="checkbox1" value=""> mann
+
+</form>
+
+
+<form class="" action="indexUtenWildboy.html" method="get">
+
+<input id="checkboxkvinne" type="checkbox" name="checkbox2" value=""> kvinne
+
+</form>
+
+
+<form class="" action="index.html" method="get">
+
+  <input id="checkboxrullestoltilgang"type="checkbox" name="checkbox3" value=""> rullestoltilgang
+
+</form>
+
+<form class="" action="index.html" method="get">
+
+  <input id="checkboxstellerom"type="checkbox" name="checkbox3" value=""> stellerom
+
+</form>
+
+<form class="" action="index.html" method="get">
+
+  <input id="checkboxgratis"type="checkbox" name="checkbox3" value=""> gratis
+
+</form>
+
+
+<br>
+
+<div =class=".flex-container2">
+<form class="" action="index.html" method="get">
+
+  <input id="makspris"type="text" name="search.bar" value=""> maksPris
+
+</form>
+
+</div>
+
+
+<br>
+
+<form class="" action="index.html" method="get">
+
+  <input id="åpenklokkeslett"type="text" name="search.bar" value="">Åpen klokkeslett
+
+</form>
+
+
+<form id="indexform" class="" action="index.html" method="get">
+
+<input id="åpent" type="checkbox" name="checkbox1" value=""> åpen nå
+
+</form>
+
+<br>
+<br>
+
+
+
+<form class="" action="index.html" method="get">
+
+  <input id="enkeltSøk" type="text" name="search.bar" value="" >enkeltSøk
+
+</form>
+
+
+<table id="tabellen">
+      <tr>
+        <td id="idToalett"> id </td>
+          <td id="plassering"> plassering </td>
+          <td id="place"> place </td>
+           <td id="adresse"> adresse </td>
+              <td id="pris"> pris </td>
+        <td id="tid_hverdag"> tid_hverdag </td>
+            <td id="tid_lordag"> tid_lordag </td>
+              <td id="tid_sondag"> tid_sondag </td>
+                        <td id="rullestol"> rullestol </td>
+                          <td id="stellerom"> stellerom </td>
+      </tr>
+
+
+</table>
+
+
+
+</body>
+
+</html>
+
+<!--
+//url.split("=")[1]
+//var url = window.location.href
+//split("a")[1]
+-->

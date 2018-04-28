@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Toaletter i Bergen</title>
+		<link rel="stylesheet" type="text/css" href="css/stylev4.css">
+	</head>
+	<body>
+		<div class="mainContent2">
+			<div class="flex-meny">
+			<div class="dropdown">
+				<button class="button buttonForDrop">Meny</button>
+				<div class="dropdown-content">
+					<a href="index.html">Forside</a>
+					<a href="kartAttraksjoner.html">Kart</a>
+					<a href="toaletter.html">Liste over toaletter</a>
+					<a href="kartToaletter.html">Kart over toaletter</a>
+					<a href="sok.html">Søkemotor</a>
+				</div>
+			</div>
+			</div>
+			<h1>Toaletter i Bergen</h1>
+			<div class="flex-container3">
+				<div id="jsontToaletter">
+
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<p>Visit Bergen AS &#169;</p>
+			<p id="test">Contact us at: info@visitBergenSuper.no</p>
+		</footer>
+		<script type="text/javascript" src="js/JavascriptSuper.js"></script>
+		<script type="text/javascript">
+			//henter oversikt over toaletter
+			hentJSON("https://hotell.difi.no/api/json/bergen/dokart?");
+		</script>
+	</body>
+</html>

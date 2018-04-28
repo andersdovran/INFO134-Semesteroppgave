@@ -1,0 +1,179 @@
+
+/* Detter er css spesifikt for forsiden */
+/* Alle andre siden henter css fra stylev4.css */
+
+
+body{
+  font-family: 'verdana', sans-serif;
+  font-weight: 100;
+}
+
+.bakgrunn{
+  background: url(../img/bergenbakgrunn.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+@media only screen and (min-width: 768px){
+  .bakgrunn {height: 1500px;}
+  .flex-h1-child {font-size: 400%;}
+  .flex-p-child {font-size: 200%;}
+  .flex-p-child {text-shadow: none;}
+  .flex-a1-child {margin-top: 550px;}
+  .flex-a1-child {font-size: 300%;}
+  .flex-a2-child {font-size: 300%;}
+}
+
+
+
+/*Flex*/
+
+
+.flex-parent{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5px;
+  flex-wrap: wrap;
+
+}
+
+
+.flex-h1-child{
+  letter-spacing: 16px;
+  color: #fff; /*hvit*/
+  text-transform: uppercase;
+  align-items: center;
+}
+
+.flex-p-child{
+  color: #fff; /*hvit*/
+  font-weight: 500;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}
+
+.flex-button-child{
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-a1-child{
+  align-items: center;
+  justify-content: center;
+  text-shadow: 2px 2px black;
+}
+
+.flex-a2-child{
+  align-items: center;
+  justify-content: center;
+  text-shadow: 2px 2px black;
+}
+
+.flex-meny{
+  justify-content: flex-start;
+  position: fixed;
+}
+
+
+/* til knapper */
+
+.button {
+    background-color: Transparent;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+
+
+    margin: 6px 12px;
+    /* -webkit-transition-duration: 0.4s; /* Safari */
+     transition-duration: 0.4s; /*tilbake til default oppførsel etter hover, tid */
+    cursor: pointer;
+}
+
+
+
+.button1 {
+    background-color: Transparent;
+    color: #fff; /*hvit*/
+    border: 2px solid #fff; /*hvit*/
+    font-weight: 200;
+    letter-spacing: 6px; /*kan økes */
+    text-transform: uppercase;
+    font-size: auto;
+}
+
+.button1:hover
+{
+
+    -webkit-transition: all 300ms ease-in; /*(Chrome, Safari, newer versions of Opera,(including Firefox for iOS)*/
+    -webkit-transform: scale(1.5);
+    -ms-transition: all 300ms ease-in; /*(Internet Explorer and Microsoft Edge)*/
+    -ms-transform: scale(1.5);
+    -moz-transition: all 300ms ease-in; /*Firefox*/
+    -moz-transform: scale(1.5);
+    transition: all 300ms ease-in;
+    transform: scale(1.5);
+    background-color: Transparent;
+}
+
+
+/* til meny */
+
+
+.buttonForDrop{
+  background-color: Transparent;
+  color: #696969; /*grå*/
+  border: 2px solid #696969; /*grå*/
+  font-weight: 100;
+  letter-spacing: 1px; /*kan økes */
+  text-transform: uppercase;
+  padding: 2px 4px;
+  font-size: 12px;
+}
+
+
+
+  .dropdown-content {
+      transition:all 0.3s ease-in-out;
+      display: none;
+      position: absolute;
+      background-color: Transparent;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+  }
+
+  .dropdown-content a {
+    background-color: Transparent;
+    color: #696969; /*grå*/
+    border: 2px solid #696969; /*grå*/
+    font-weight: 100;
+    letter-spacing: 1px; /*kan økes */
+    text-transform: uppercase;
+    padding: 2px 4px;
+    font-size: 16px;
+    display: block;
+    text-align: center;
+    background-color: Transparent;
+
+  }
+
+
+  /* Endre fargen på dropdown ved hover */
+  .dropdown-content a:hover {background-color: #f1f1f1} /*lys grå*/
+
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+      display: block;
+  }
+
+  /* Endrer fargen på dropdwon-button når dropwdown vises */
+  .dropdown:hover .dropbtn {
+      background-color: #3e8e41;
+  }
