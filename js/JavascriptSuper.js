@@ -74,20 +74,20 @@ function clickprog(id){
   			{
 				//henter innholder på siden
   				var tekst = fil.responseText;
-				
+
 				//lager et JSON-objekt
   				var objekt = JSON.parse(tekst);
 
-  				var innhold = "<table><tr><th>Toalett</th><tr>";
-				
+  				var innhold = "<table id='tblToaletter'><tr><th>Toalett</th><tr>";
+
 				//itererer objektet
   				for (var i=0; i < objekt.entries.length; i++)
   				{
-  					innhold += "<td>" + objekt.entries[i].plassering + "</td></tr>";
+  					innhold += "<td>"+objekt.entries[i].id+"<td><td>" + objekt.entries[i].plassering + "</td></tr>";
   				}
 
   				innhold += "</table>";
-				
+
 				//viser innholdet i vinduet
   				document.getElementById("jsontToaletter").innerHTML = innhold;
   			}
@@ -1180,11 +1180,11 @@ return returnInnhold;
 function hurtigSok()
 {
 	var sokeTekst = document.getElementById("sokeTekst").value;
-	
+
 	// RegEx
 	var toalettSok = /(\w+)[\s]((\w+)[\:](\w+))+/;
-	
-	
+
+
     // Finner delene av soketeksten (hvis beskrivelsen følger mønsteret over)
     var deler = sokeTekst.match(toalettSok);
 
