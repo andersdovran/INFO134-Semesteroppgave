@@ -81,63 +81,64 @@ box-sizing: border-box;
 .extFloycss{
   visibility: hidden;
 }
-.buttonForDrop{
-  background-color: transparent;
-  color: #696969; /*grå*/
-  border: 2px solid #696969; /*grå*/
-  font-weight: 100;
-  letter-spacing: 1px; /*kan økes */
-  text-transform: uppercase;
-  padding: 2px 4px;
-  font-size: 12px;
-}
 
 
+/* -------Dropdown meny------- */
 
-  .dropdown-content {
-      transition:all 0.3s ease-in-out;
-      display: none;
-      position: absolute;
-      background-color: #5F9EA0; /*cadet blue */
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-  }
+    .buttonForDrop{
+        background-color: transparent;
+        color: #696969; /*grå*/
+        border: 2px solid #696969; /*grå*/
+        font-weight: 100;
+        letter-spacing: 1px; /*kan økes */
+        text-transform: uppercase;
+        padding: 2px 4px;
+        font-size: 12px;
+    }
 
-  .dropdown-content a {
-    background-color: #5F9EA0; /*cadet blue */
-    color: #696969; /*grå*/
-    border: 2px solid #696969; /*grå*/
-    font-weight: 100;
-    letter-spacing: 1px; /*kan økes */
-    text-transform: uppercase;
-    padding: 2px 4px;
-    font-size: 16px;
-    display: block;
-    text-align: center;
-    background-color: Transparent;
+    .dropdown-content {
+        transition:all 0.3s ease-in-out;
+        display: none;
+        position: absolute;
+        background-color: #5F9EA0; /*cadet blue */
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
 
-  }
+    .dropdown-content a {
+        background-color: #5F9EA0; /*cadet blue */
+        color: #696969; /*grå*/
+        border: 2px solid #696969; /*grå*/
+        font-weight: 100;
+        letter-spacing: 1px; /*kan økes */
+        text-transform: uppercase;
+        padding: 2px 4px;
+        font-size: 16px;
+        display: block;
+        text-align: center;
+        background-color: Transparent;
 
-
-  /* Endre fargen på dropdown ved hover */
-  .dropdown-content a:hover {background-color: #f1f1f1} /*lys grå*/
-
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {
-      display: block;
-  }
+    }
+    /* Endre fargen på dropdown ved hover */
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+        } /*lys grå*/
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
 
   /* Endrer fargen på dropdwon-button når dropwdown vises */
-  .dropdown:hover .dropbtn {
-      background-color: #3e8e41;
-  }
+    .dropdown:hover .dropbtn {
+        background-color: #3e8e41;
+    }
 
   /*til map */
- #map {
-  width: 600px;
+ .Style-Kart {
+  width: 100%;
   height: 400px;
-  background-color: grey;
+
   }
 
 
@@ -155,6 +156,7 @@ box-sizing: border-box;
 
 
 /* CSS til table */
+/* styrer style internt i tabellen */
 .tblStyle{
     display: flex;
  flex-wrap: wrap;
@@ -168,43 +170,88 @@ box-sizing: border-box;
     background-color: gray;
     color: white;
 }
-.table-container{
+.container-tabell{
 margin : 0 auto;
 font-size : 4vw;
-flex-wrap: nowrap;
-flex-direction: column;
 
 }
 /* Responsive layout - makes a two column-layout instead of four columns */
-@media (min-width: 720px) {
-    .column {
-        flex: 25%;
-        max-width: 50%;
+
+
+
+/* --------Media query-------- */
+
+    /* tablets og større telefoner */
+    @media (min-width: 769px){
+        .container-tabell{
+            font-size : 4vw;
+        }
+        /* Setter høyde- og breddeverdier til kartet.*/
+        .Style-Kart{
+            width: 100%;
+            height: 500px;
+            margin-left: 0px;
+        }
     }
-  .flex-container3 {
-      flex: 50%;
-  }
-  .table-container{
-  font-size : 100%;
 
-  }
-
-}
-
-
-.flex-container5{
-
-    display: inline-flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    align-content: stretch;
+    /* Medium enheter - mindre desktopper */
+    @media (min-width: 970px){
+        .container-tabell{
+            font-size : 100%;
+        }
+        .Style-Kart{
+            width: 350px;
+            height: 350px;
+            margin-left: 10px;
+        }
+    }
+    /* større desktop */
+    @media (min-width: 1170px) {
+        .column {
+            flex: 25%;
+            max-width: 50%;
+        }
+        .flex-container3 {
+            flex: 50%;
+        }
+        .container-tabell {
+            font-size : 100%;
+        }
+        .Style-Kart{
+            width: 500px;
+            height: 500px;
+            margin-left: 20px;
+        }
+    /*Ekstra store skjermer ---- Gjelder kun sider med tabeller*/
+    @media (min-width: 1920px) {
+        .Style-Kart{
+            width: 650px;
+            height: 650px;
+            margin-left: 20px;
+        }
+        .container-tabell{
+            font-size : 150%;
+        }
+    }
 
 
 }
 .flexChildToilet{
-    flex: 1,1,auto;
 
+
+}
+/* Flexbox for tabell og kart */
+/* Gitt verdier som gir rad i desktop og kollonne i mobile (og tablet) */
+.flexContainer-TabellogKart{
+
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: space-between;
+    flex: 1 1 auto;
+
+}
+.footer{
+    font-size: 100%;
 }

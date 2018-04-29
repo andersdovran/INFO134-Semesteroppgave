@@ -4,9 +4,10 @@
 		<meta charset="utf-8">
 		<title>Toaletter i Bergen</title>
 		<link rel="stylesheet" type="text/css" href="css/stylev4.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
-		<div class="mainContent2">
+	        <!--Menyknapp -->
 			<div class="flex-meny">
 			<div class="dropdown">
 				<button class="button buttonForDrop">Meny</button>
@@ -19,37 +20,25 @@
 				</div>
 			</div>
 			</div>
+		<h1>Toaletter i Bergen</h1>
+			<div class="flexContainer-TabellogKart">
 
-
-		<!--<div class="flexChildToilet"> -->
-
-			<h1>Toaletter i Bergen</h1>
-			<div class="flex-container5">
-					<div class="table-container">
-				<div id="jsontToaletter">
-
+				<div class="container-tabell">
+					<!--Div for tabell -->
+					<div id="jsontToaletter"></div>
+						<script type="text/javascript" src="js/JavascriptSuper.js"></script>
+						<script type="text/javascript">
+						//henter oversikt over toaletter
+						hentJSON("https://hotell.difi.no/api/json/bergen/dokart?");
+						</script>
 				</div>
-
-
-		<script type="text/javascript" src="js/JavascriptSuper.js"></script>
-		<script type="text/javascript">
-			//henter oversikt over toaletter
-			hentJSON("https://hotell.difi.no/api/json/bergen/dokart?");
-		</script>
-	</div>
-
-</div>
-		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSlRWLI4kEhuDYQ9xq0XGn26-llUcs68w&callback=initMap"> </script>
-		<div class="flex-container5">
-		<div id="map" class="flexChildToilet"></div>
-		</div>
-
-
-</div>
-<footer class="footer">
-	<p>Visit Bergen AS &#169;</p>
-	<p id="test">Contact us at: info@visitBergenSuper.no</p>
-</footer>
-
+						<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSlRWLI4kEhuDYQ9xq0XGn26-llUcs68w&callback=initMap"> </script>
+				<!--Div for google maps -->
+				<div id="map" class="Style-Kart"></div>
+			</div>
+		<footer class="footer">
+			<p>Visit Bergen AS &#169;</p>
+			<p id="test">Contact us at: info@visitBergenSuper.no</p>
+		</footer>
 	</body>
 </html>
