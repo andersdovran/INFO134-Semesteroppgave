@@ -3,27 +3,203 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Toaletter i Bergen</title>
-		<link rel="stylesheet" type="text/css" href="css/stylev4.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
 
 
-    <div class="header-wrapper">
-    <img class="style-header" src="media/header.png">
-    </div>
+
+
+
+
+	<script>
+
+	function clickmeny(id){
+	  console.log(id);
+	  var t = document.getElementById(id)
+	  if(t.style.display) {
+	    if(t.style.display === "none"){
+	      t.style.display = "block";
+	    }
+	    else{
+	      t.style.display = "none";
+	    }
+	  }
+	  else{
+	    t.style.display = "none";
+	  }
+	  }
+
+	</script>
+		<div class="displayContainer">
+		<div class="container-bakgrunn">
+			<div class="container-knapp">
+				<div class="StorKnappStyle">
+					<button> Hjem </button>
+					<button> Utforsk </button>
+					<button> Toaletter </button>
+					<button> Barnehager </button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+<style>
+
+
+	.container-knapp {
+
+		text-align: center;
+
+
+
+
+	}
+	.StorKnappStyle{
+
+
+
+	}
+	.StorKnappStyle button{
+		border: 2px solid #white; /*grå*/
+		padding: 2px 4px;
+		background-color:rgb(1,71,100);
+		color: white;
+		margin-top: 4vh;
+		letter-spacing: 2px;
+		font-size: 20px;
+
+
+
+
+	}
+
+
+
+
+	.StorKnappStyle button:hover {
+	       background-color: rgb(2 137 196);
+		    transition:all 0.3s ease-in-out;
+	       }
+
+
+
+	.container-bakgrunn{
+		height: 24vh;
+		width: 100%;
+		background: url("media/header_long.png");
+		background-size: contain;
+		background-repeat: no-repeat;
+}
+	.displayContainer{
+		display: none;
+	}
+
+	}
+	.buttons{
+		margin: auto;
+		}
+
+  .bakgrunn{
+
+
+
+
+		        }
+
+</style>
+
+
+
+
+
+	<div class="flex-meny">
+
+		<button class="menyKnapp" onclick="clickmeny('menyaction')">mer info</button>
+
+
+
+		<div id="menyaction" style="display: none;">
+		<div class="meny-innhold">
+
+			<a href="index.html">Forside</a>
+			<a href="kartAttraksjoner.html">Kart</a>
+			<a href="toaletter.html">Liste over toaletter</a>
+			<a href="kartToaletter.html">Kart over toaletter</a>
+			<a href="sok.html">Søkemotor</a>
+		</div>
+		</div>
+
+	</div>
 
 
     <style>
-        .style-header{
-            height: 100px;
-            width: 100%;
-            display: none;
 
-        }
-        @media (min-width: 720px) {
-            display: on;
-        }
+	.storMenyknapp{
+		color:rgb(19,142,234);
+
+
+	}
+
+	.meny {
+	    position: relative;
+	    display: inline-block;
+	}
+
+	.menyKnapp{
+        background-color: transparent;
+        color: #696969; /*grå*/
+        border: 2px solid #696969; /*grå*/
+        font-weight: 100;
+        letter-spacing: 1px; /*kan økes */
+        text-transform: uppercase;
+        padding: 2px 4px;
+        font-size: 12px;
+    }
+
+	.meny-innhold {
+	    position: absolute;
+	    background-color: #f9f9f9;
+	    min-width: 160px;
+	    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	    padding: 12px 16px;
+	    z-index: 1;
+	}
+
+	.meny-innhold a {
+        background-color: #5F9EA0; /*cadet blue */
+        color: #696969; /*grå*/
+        border: 2px solid #696969; /*grå*/
+        font-weight: 100;
+        letter-spacing: 1px; /*kan økes */
+        text-transform: uppercase;
+        padding: 2px 4px;
+        font-size: 16px;
+        display: block;
+        text-align: center;
+        background-color: Transparent;
+	}
+
+
+
+
+
+        @media (min-width: 970px){
+			.style-header{
+				height: 80%;
+
+			}
+			.menyKnapp{
+				display: none;
+			}
+			.displayContainer{
+				display: initial;
+			}
+		}
+
+		</style>
 
 
 
