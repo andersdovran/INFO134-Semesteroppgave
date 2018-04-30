@@ -7,21 +7,27 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
-<script>
-    function clickprog(id){
-        console.log(id);
-        var t = document.getElementById(id)
-        if(t.style.visibility) {
-            if(t.style.visibility === "hidden"){
-                t.style.visibility = "visible";
-            }
-            else{
-                t.style.visibility = "hidden";
-            }
-        }
-        else{
-            t.style.visibility = "hidden";
-        }
-  }
 
-  </scipt>
+
+    <div class="header-wrapper">
+    <img class="style-header" src="media/header.png">
+    </div>
+
+
+    <style>
+        .style-header{
+            height: 100px;
+            width: 100%;
+            display: none;
+
+        }
+        @media (min-width: 720px) {
+            display: on;
+        }
+
+
+
+
+</body>
+
+</html>
