@@ -1,4 +1,24 @@
 
+/* Mobil-menyknapp */
+function clickmeny(id){
+  console.log(id);
+  var t = document.getElementById(id)
+  if(t.style.display) {
+    if(t.style.display === "none"){
+      t.style.display = "block";
+    }
+    else{
+      t.style.display = "none";
+    }
+  }
+  else{
+    t.style.display = "none";
+  }
+  }
+
+
+
+
 /* Infoknapp */
 
 function clickprog(id){

@@ -29,10 +29,27 @@
 	    t.style.display = "none";
 	  }
 	  }
+/*
+	  function bytteBakgrunn(id){
+		  var t = document.getElementById(id)
+		  if (window.matchMedia("(min-width: 970px)").matches) {
+			  t.style.background = url("media/header_long.png");
 
+		} else {
+			t.style.background = url("media/header_short.png");
+
+		}
+	  }
+*/
 	</script>
+		<div class="container-bakgrunnMobile">
+		</div>
+
+
+
 		<div class="displayContainer">
 		<div class="container-bakgrunn">
+
 			<div class="container-knapp">
 				<div class="StorKnappStyle">
 					<button> Hjem </button>
@@ -41,6 +58,7 @@
 					<button> Barnehager </button>
 				</div>
 			</div>
+
 		</div>
 	</div>
 
@@ -52,6 +70,9 @@
 	.container-knapp {
 
 		text-align: center;
+		width: 100%;
+
+
 
 
 
@@ -67,7 +88,8 @@
 		padding: 2px 4px;
 		background-color:rgb(1,71,100);
 		color: white;
-		margin-top: 4vh;
+		margin-top: 2vh;
+		margin-bottom:2vh;
 		letter-spacing: 2px;
 		font-size: 20px;
 
@@ -87,12 +109,22 @@
 
 
 	.container-bakgrunn{
-		height: 24vh;
+		height:20vh;
 		width: 100%;
+		margin: 0;
+		padding: 0;
 		background: url("media/header_long.png");
 		background-size: contain;
 		background-repeat: no-repeat;
 }
+
+	.container-bakgrunnMobile{
+		background: url("media/header_short.png");
+		background-size: contain;
+		height: 12vh;
+		Width: 100%;
+		background-repeat: repeat-x;
+	}
 	.displayContainer{
 		display: none;
 	}
@@ -136,6 +168,8 @@
 
 
     <style>
+
+
 
 	.storMenyknapp{
 		color:rgb(19,142,234);
@@ -194,10 +228,20 @@
 			.menyKnapp{
 				display: none;
 			}
+			.container-bakgrunnMobile{
+				display:none;
+			}
 			.displayContainer{
 				display: initial;
 			}
+
 		}
+		@media (min-width: 1170px){
+			.StorKnappStyle button{
+				margin-top: 4vh;
+		}
+
+
 
 		</style>
 

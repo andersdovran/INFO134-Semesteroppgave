@@ -179,6 +179,122 @@ font-size : 4vw;
 
 
 
+
+
+
+.flexChildToilet{
+
+
+}
+/* Flexbox for tabell og kart */
+/* Gitt verdier som gir rad i desktop og kollonne i mobile (og tablet) */
+.flexContainer-TabellogKart{
+
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: space-between;
+    flex: 1 1 auto;
+
+}
+.footer{
+    font-size: 100%;
+}
+
+/* Til oppdatert layout */
+
+.container-knapp {
+
+    text-align: center;
+    width: 100%;
+}
+
+.StorKnappStyle button{
+    border: 2px solid #white; /*grå*/
+    padding: 2px 4px;
+    background-color:rgb(1,71,100);
+    color: white;
+    margin-top: 2vh;
+    margin-bottom:2vh;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+.StorKnappStyle button:hover {
+       background-color: rgb(2 137 196);
+        transition:all 0.3s ease-in-out;
+       }
+
+.container-bakgrunn{
+    height:20vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: url("media/header_long.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.container-bakgrunnMobile{
+    background: url("media/header_short.png");
+    background-size: contain;
+    height: 12vh;
+    Width: 100%;
+    background-repeat: repeat-x;
+}
+.displayContainer{
+    display: none;
+}
+
+.storMenyknapp{
+    color:rgb(19,142,234);
+
+
+}
+
+.meny {
+    position: relative;
+    display: inline-block;
+}
+
+.menyKnapp{
+    background-color: transparent;
+    color: #696969; /*grå*/
+    border: 2px solid #696969; /*grå*/
+    font-weight: 100;
+    letter-spacing: 1px; /*kan økes */
+    text-transform: uppercase;
+    padding: 2px 4px;
+    font-size: 12px;
+}
+
+.meny-innhold {
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.meny-innhold a {
+    background-color: #5F9EA0; /*cadet blue */
+    color: #696969; /*grå*/
+    border: 2px solid #696969; /*grå*/
+    font-weight: 100;
+    letter-spacing: 1px; /*kan økes */
+    text-transform: uppercase;
+    padding: 2px 4px;
+    font-size: 16px;
+    display: block;
+    text-align: center;
+    background-color: Transparent;
+}
+
+
+
+
 /* --------Media query-------- */
 
     /* tablets og større telefoner */
@@ -204,6 +320,15 @@ font-size : 4vw;
             height: 350px;
             margin-left: 10px;
         }
+        .menyKnapp{
+            display: none;
+        }
+        .container-bakgrunnMobile{
+            display:none;
+        }
+        .displayContainer{
+            display: initial;
+        }
     }
     /* større desktop */
     @media (min-width: 1170px) {
@@ -222,6 +347,9 @@ font-size : 4vw;
             height: 500px;
             margin-left: 20px;
         }
+        .StorKnappStyle button{
+            margin-top: 4vh;
+    }
     /*Ekstra store skjermer ---- Gjelder kun sider med tabeller*/
     @media (min-width: 1920px) {
         .Style-Kart{
@@ -233,25 +361,3 @@ font-size : 4vw;
             font-size : 150%;
         }
     }
-
-
-}
-.flexChildToilet{
-
-
-}
-/* Flexbox for tabell og kart */
-/* Gitt verdier som gir rad i desktop og kollonne i mobile (og tablet) */
-.flexContainer-TabellogKart{
-
-    display: inline-flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    align-content: space-between;
-    flex: 1 1 auto;
-
-}
-.footer{
-    font-size: 100%;
-}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Toaletter i Bergen</title>
+		<link rel="stylesheet" type="text/css" href="css/stylev4.css">
+		<meta name="viewport" content="fwidth=device-width, initial-scale=1">
+		<script type="text/javascript" src="js/JavascriptSuper.js"></script>
+	</head>
+	<body>
+			<div class="container-bakgrunnMobile"></div>
+
+			<div class="displayContainer">
+			<div class="container-bakgrunn">
+
+				<div class="container-knapp">
+					<div class="StorKnappStyle">
+						<button> Hjem </button>
+						<button> Utforsk </button>
+						<button> Toaletter </button>
+						<button> Barnehager </button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="flex-meny">
+
+			<button class="menyKnapp" onclick="clickmeny('menyaction')">mer info</button>
+
+
+
+			<div id="menyaction" style="display: none;">
+			<div class="meny-innhold">
+
+				<a href="index.html">Forside</a>
+				<a href="kartAttraksjoner.html">Kart</a>
+				<a href="toaletter.html">Liste over toaletter</a>
+				<a href="kartToaletter.html">Kart over toaletter</a>
+				<a href="sok.html">Søkemotor</a>
+			</div>
+			</div>
+
+		</div>
+
+
+		<h1>Toaletter i Bergen</h1>
+			<div class="flexContainer-TabellogKart">
+
+				<div class="container-tabell">
+					<!--Div for tabell -->
+					<div id="jsontToaletter"></div>
+						<script type="text/javascript" src="js/JavascriptSuper.js"></script>
+						<script type="text/javascript">
+						//henter oversikt over toaletter
+						hentJSON("https://hotell.difi.no/api/json/bergen/dokart?");
+						</script>
+				</div>
+						<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSlRWLI4kEhuDYQ9xq0XGn26-llUcs68w&callback=initMap"> </script>
+				<!--Div for google maps -->
+				<div id="map" class="Style-Kart"></div>
+			</div>
+		<footer class="footer">
+			<p>Visit Bergen AS &#169;</p>
+			<p id="test">Contact us at: info@visitBergenSuper.no</p>
+		</footer>
+	</body>
+</html>
